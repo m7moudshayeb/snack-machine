@@ -1,0 +1,78 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.App button {
+  border: 0;
+  padding: 10px 8px;
+  min-width: 30px;
+  margin: 0 8px 10px;
+  color: white;
+  background: #8194b3;
+  text-transform: uppercase;
+}
+
+.App button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.App button:hover,
+.App button:focus {
+  background: rgba(120, 120, 120, 0.4);
+}
+
+button.selectedButton {
+  background: #273854;
+}
+
+.selected {
+  border-color: #104cad !important;
+}
+
+.selected:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.change-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 800px;
+  max-height: 700px;
+  min-width: 200px;
+  padding: 30px;
+  overflow: auto;
+  background: white;
+  z-index: 1000;
+}
+
+.change-modal:before {
+  content: " ";
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4);
+}
